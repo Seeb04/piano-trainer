@@ -14,6 +14,7 @@ public class GameEngine {
     receives a Song object that contains the array of SongNote objects
     it starts a timer that 'ticks' every 20 ms which checks what notes should appear based on their timeMs and sends them to the NotePanel
     Once every note has been played it stops
+
      */
 
     private final NotePanel notePanel;
