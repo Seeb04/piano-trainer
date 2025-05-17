@@ -96,6 +96,7 @@ public class PianoKeyboardBuilder{
         key.setContentAreaFilled(true);
     }
 
+    //used for playing sound through event listener
     public String getNoteForKeyCode(int keyCode) {
         for (int i = 0; i < KEY_CODES.length; i++) {
             if (KEY_CODES[i] == keyCode) {
@@ -104,6 +105,7 @@ public class PianoKeyboardBuilder{
         }
         return null;
     }
+
 
     private void setupWhiteKeys() {
         for (int i = 0; i < WHITE_NOTES.length; i++) {
@@ -145,12 +147,16 @@ public class PianoKeyboardBuilder{
     }
 
     public JButton findKeyButton(String note) {
-        for (int i = 0; i < WHITE_NOTES.length; i++)
-            if (note.equals(WHITE_NOTES[i])) return whiteKeyButtons[i];
-
-        for (int i = 0; i < BLACK_NOTES.length; i++)
-            if (note.equals(BLACK_NOTES[i])) return blackKeyButtons[i];
-
+        for (int i = 0; i < WHITE_NOTES.length; i++) {
+            if (note.equals(WHITE_NOTES[i])) {
+                return whiteKeyButtons[i];
+            }
+        }
+        for (int i = 0; i < BLACK_NOTES.length; i++) {
+            if (note.equals(BLACK_NOTES[i])) {
+                return blackKeyButtons[i];
+            }
+        }
         return null;
     }
 
