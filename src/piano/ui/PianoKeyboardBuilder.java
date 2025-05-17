@@ -20,7 +20,6 @@ public class PianoKeyboardBuilder{
     protected final int BLACK_KEY_WIDTH = 40;
     protected final int BLACK_KEY_HEIGHT = 150;
 
-
     //all white notes that can be played
     private final String[] WHITE_NOTES = {
             "C4", "D4", "E4", "F4", "G4", "A4", "B4",

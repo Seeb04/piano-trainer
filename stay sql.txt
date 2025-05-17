@@ -1,0 +1,27 @@
+-- Insert into songs table
+INSERT INTO songs (id, title, bpm) VALUES (4,"Stay", 130);
+
+-- Insert note sequence into song_notes table with song_id = 4
+--bar one
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "F#4", 0);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C6", 250);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 500);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "G#6", 750);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 1375);
+--bar two
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "G#4", 1750);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C6", 2000);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 2250);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "G#5", 2500);
+--bar thrww
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "A#4", 2875);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C6", 3125);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 3375);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "G#6", 3625);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 4250);
+--bar four
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "F4", 4625);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C6", 5000);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "C#6", 5250);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "G#5", 5625);
+INSERT INTO song_notes (song_id, note, time_ms) VALUES (4, "A#5", 5875);

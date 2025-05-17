@@ -13,7 +13,7 @@ public class NotePanel extends JPanel {
 
     private static final int FALL_NOTE_WIDTH = 40;
     private static final int FALL_NOTE_HEIGHT = 30;
-    private static final int MAX_NOTES = 10;
+    private static final int MAX_NOTES = 12;
     private static final int FALL_SPEED = 5;
     private static final int PANEL_HEIGHT = 530;
     //defining deadzone window
