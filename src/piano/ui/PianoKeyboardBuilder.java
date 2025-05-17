@@ -14,38 +14,39 @@ public class PianoKeyboardBuilder{
 
     private final PianoUI UI;
 
+    //Defining each key's dimensions in px
     protected final int WHITE_KEY_WIDTH = 60;
     protected final int WHITE_KEY_HEIGHT = 250;
     protected final int BLACK_KEY_WIDTH = 40;
     protected final int BLACK_KEY_HEIGHT = 150;
-    private JButton lastPressedKey = null;
-    private String lastPressedNote = null;
 
+
+    //all white notes that can be played
     private final String[] WHITE_NOTES = {
             "C4", "D4", "E4", "F4", "G4", "A4", "B4",
             "C5", "D5", "E5", "F5", "G5", "A5", "B5",
             "C6", "D6", "E6", "F6", "G6", "A6", "B6"
     };
-
+    //all black notes that can be played
     private final String[] BLACK_NOTES = {
             "C#4", "D#4", "F#4", "G#4", "A#4",
             "C#5", "D#5", "F#5", "G#5", "A#5",
             "C#6", "D#6", "F#6", "G#6", "A#6"
     };
 
-    // For white keys (C4 to B6)
+    // For white keys
     private final String[] WHITE_KEY_LABELS = {
             "Z", "X", "C", "V", "B", "N", "M",
             "Q", "W", "E", "R", "T", "Y", "U",
             "I", "O", "P", "[", "]", "\\", ""
     };
-    // For black keys (C#4 to A#6)
+    // For black keys
     private final String[] BLACK_KEY_LABELS = {
             "S", "D", "G", "H", "J",
             "2", "3", "5", "6", "7",
             "9", "0", "=", "BKS", ""
     };
-    //
+    //yes
     private final int[] BLACK_OFFSETS = {
             0, 1, 3, 4, 5,
             7, 8, 10, 11, 12,
@@ -64,14 +65,18 @@ public class PianoKeyboardBuilder{
             KeyEvent.VK_CLOSE_BRACKET, KeyEvent.VK_BACK_SPACE, KeyEvent.VK_BACK_SLASH
     };
 
+    //all possible notes that can be played
     private final String[] MAPPED_KEY_NOTES = {
             "C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4",
             "C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5",
             "C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6"
     };
 
+    //used for highlighting purposes
     private final JButton[] whiteKeyButtons = new JButton[21];
     private final JButton[] blackKeyButtons = new JButton[15];
+    private JButton lastPressedKey = null;
+    private String lastPressedNote = null;
 
     public PianoKeyboardBuilder(PianoUI UI) {
         this.UI = UI;
