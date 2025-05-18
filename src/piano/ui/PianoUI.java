@@ -280,6 +280,7 @@ public class PianoUI extends JFrame implements KeyListener {
             DatabaseManager dbSelect = new DatabaseManager();
             Song loadedSong = dbSelect.loadSongByTitle(selectedTitle);
             if (!scoreLabel.isVisible()) {
+                resetScore();
                 scoreLabel.setVisible(true);
             }
 
@@ -305,10 +306,12 @@ public class PianoUI extends JFrame implements KeyListener {
         stopButton.setBackground(buttonColor);
         stopButton.setForeground(textColor);
         stopButton.setBounds(650, 280, 120, 30);
+
         stopButton.addActionListener(e -> {
             notePanel.stopGame();
             GAME_ENGINE.stop();
             resetScore();
+            scoreLabel.setVisible(false);
             startButton.setEnabled(true); //enabled to allow restarting
             requestFocusInWindow(); //so the keyboard inputs are recognized
         });
@@ -329,6 +332,7 @@ public class PianoUI extends JFrame implements KeyListener {
         exitButton.addActionListener( e -> {
             System.exit(0);
         });
+
         exitButton.setMaximumSize(new Dimension(120, 30));
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
