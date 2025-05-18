@@ -183,16 +183,20 @@ public class PianoUI extends JFrame implements KeyListener {
     // SETUP
     private void setupWindow() {
         setTitle("Piano Trainer - OOP Project – Spring 2025");
+
         JLabel title = new JLabel("Haseeb Haroon 20241-35751");
+
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
         title.setForeground(Color.decode("#DDDDDD"));
         title.setBounds(20, 790, 500, 30);
+
         this.add(title, BorderLayout.SOUTH);
 
         // Responsive to physical screen size
         int width = (int)(screenSize.width * 0.8);
         int height = (int)(screenSize.height * 0.8);
-        setSize(width, height);
+
+        this.setSize(width, height);
         getContentPane().setBackground(Color.decode("#293133"));
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -270,7 +274,6 @@ public class PianoUI extends JFrame implements KeyListener {
         startButton.setBackground(buttonColor);
         startButton.setForeground(textColor);
 
-        //Need to understand properly
         startButton.addActionListener(e -> {
             String selectedTitle = (String) songSelectorMenu.getSelectedItem();
             DatabaseManager dbSelect = new DatabaseManager();
