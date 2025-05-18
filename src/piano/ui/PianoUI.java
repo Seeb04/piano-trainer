@@ -12,7 +12,7 @@ import piano.data.DatabaseManager;
 public class PianoUI extends JFrame implements KeyListener {
 
     protected int OLD_WHITE_KEY_WIDTH = 60;
-    /*
+    /*^^^^^
     SAME FUNCTIONALITY AS THE ONE FOUND IN PianoKeyboardBuilder
     Could not shift this to PianoKeyboardBuilder as everything in that java file was first implemented in this file but
     the code got too messy to deal with, so I created another java file that was responsible for building the keyboard and its core functionalities.
@@ -101,22 +101,6 @@ public class PianoUI extends JFrame implements KeyListener {
         }
     }
 
-    private void setupScorePanel() {
-        scorePanel = new JPanel();
-        scorePanel.setBounds(0,0, 150, 50);
-        scoreLabel = new JLabel("Score: " + currentScore);
-        scoreLabel.setFont(new Font("Segoe UI", Font.BOLD, 17));
-        scoreLabel.setForeground(Color.decode("#DDDDDD"));
-        scoreLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
-
-        scorePanel.setOpaque(false);
-        scorePanel.add(scoreLabel);
-
-        scoreLabel.setVisible(false);
-        scorePanel.setVisible(true);
-        this.add(scorePanel);
-
-    }
 
     protected void addScore() {
         currentScore += SCORE_INCREMENT;
@@ -199,7 +183,7 @@ public class PianoUI extends JFrame implements KeyListener {
     // SETUP
     private void setupWindow() {
         setTitle("Piano Trainer - OOP Project – Spring 2025");
-        JLabel title = new JLabel("Haseeb Haroon 20241-35571");
+        JLabel title = new JLabel("Haseeb Haroon 20241-35751");
         title.setFont(new Font("Segoe UI", Font.BOLD, 22));
         title.setForeground(Color.decode("#DDDDDD"));
         title.setBounds(20, 790, 500, 30);
@@ -227,6 +211,23 @@ public class PianoUI extends JFrame implements KeyListener {
         noteBackground.setOpaque(true);
 
         add(notePanel);
+
+    }
+
+    private void setupScorePanel() {
+        scorePanel = new JPanel();
+        scorePanel.setBounds(0,0, 150, 50);
+        scoreLabel = new JLabel("Score: " + currentScore);
+        scoreLabel.setFont(new Font("Segoe UI", Font.BOLD, 17));
+        scoreLabel.setForeground(Color.decode("#DDDDDD"));
+        scoreLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        scorePanel.setOpaque(false);
+        scorePanel.add(scoreLabel);
+
+        scoreLabel.setVisible(false);
+        scorePanel.setVisible(true);
+        this.add(scorePanel);
 
     }
 
