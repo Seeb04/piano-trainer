@@ -274,6 +274,7 @@ public class PianoUI extends JFrame implements KeyListener {
         startButton.setBackground(buttonColor);
         startButton.setForeground(textColor);
 
+        //something happens here
         startButton.addActionListener(e -> {
             String selectedTitle = (String) songSelectorMenu.getSelectedItem();
             DatabaseManager dbSelect = new DatabaseManager();
